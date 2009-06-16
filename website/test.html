@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Quazie's poeid generator</title>
+	<script language="JavaScript">
+
+	colorList = new Array();
+
+	colorList[0] = "blue";
+	colorList[1] = "black";
+	colorList[2] = "orange";
+	colorList[3] = "yellow";
+	colorList[4] = "grey";
+	colorList[5] = "white";
+	colorList[6] = "red";
+	colorList[7] = "teal";
+
+	var randColor = function() {
+		var now = new Date();
+		var secs = now.getSeconds();
+		var raw_random_number = Math.random(secs);
+		var random_number = Math.round(raw_random_number * (colorList.length));
+
+		if (random_number == colorList.length){random_number = 0}
+		return colorList[random_number];
+	}
+	//randomization
+	
+	</script>
+	<style type="text/css" media="screen">
+		.content {
+			background: purple;
+			margin: 0 auto 0 auto;
+			width: 35em;
+			padding: 1em;
+			}
+		h1 {
+			margin-top: 0;
+			}
+		body {
+			color:white;
+			}
+			
+		a {
+			color: white;
+			}
+		a:visited {
+			color: darkgrey;
+			}
+		.byline {
+				text-align:right;
+				padding: 1em 0 0 0;
+				font-size: .75em;
+			}
+		#test {
+			color:blue;
+				text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div class="content" id="test">
+		<h1>Set where Coffee House Coders will be in the next few weeks!</h1>
+
+		<div class = "byline">
+			<a href = "http://quazie.net">Brandon 'Quazie' Kwaselow Made this!</a>
+		</div>
+	</div>
+	<script language="JavaScript">
+	 var color1 = randColor();
+	 var color2 = randColor();
+	 while(color1 == color2){
+		color2 = randColor();
+	}
+	 document.getElementById("test").style.color = color1;
+	 document.getElementById("test").style.background = color2;
+	</script>
+</body>
+
+</html>

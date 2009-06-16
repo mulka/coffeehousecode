@@ -1,0 +1,27 @@
+Hello!
+
+This README is intended for people who want to modify
+http://coffeehousecoders.org.
+
+To get your changes on the live site, send a diff to
+startup@coffeehousecoders.org. We're a pretty friendly bunch. : )
+
+
+Here are the files you probably care about:
+
+    - app.yaml: Lets App Engine know where to find static content
+
+    - main.py: Go here to add/modify pages on the site. Each page is a
+        class that inherits from BaseRequestClass, and routed at the bottom of
+        the file. There are plenty of examples to follow in the file. Note you
+        only need to include the "inner" HTML, the "outer" HTML comes from
+        templates/base_page.html.
+
+    - static/*: CSS and images for the site
+
+    - templates/base_page.html: HTML for header, nav bar, activity feed, footer
+
+
+Obviously, there is more code to the site, hopefully it'll be documented better
+in future versions.
+
