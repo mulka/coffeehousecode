@@ -147,6 +147,9 @@ class LocationHandler(BaseRequestHandler):
                         <li>
                             <a href="/locations/ann_arbor.html">Ann Arbor, MI</a>
                         </li>
+                        <li>
+                            <a href="/locations/detroit.html">Detroit, MI</a>
+                        </li>
                     </ul>
                 </div>
                 """})
@@ -169,6 +172,19 @@ class AnnArborHandler(BaseRequestHandler):
                 <p>Want your project linked here? Come bug us!</p>
                 """})
 
+class DetroitHandler(BaseRequestHandler):
+
+    def get(self):
+        self.generate('base_page.html', {'content': """
+                <p>We meet every Wednesday, from 7-10 EST, at:</p>
+<pre>Caribou Coffee
+1413 W 14 Mile Rd
+Madison Heights, MI 48071</pre>
+
+                <p>The last Wed of the month is a special longer edition that starts at 7pm.</p>
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;sll=42.577608,-83.145218&amp;sspn=0.144102,0.350189&amp;ie=UTF8&amp;radius=8.92&amp;rq=1&amp;cid=17926306267005349755&amp;ll=42.544038,-83.119726&amp;spn=0.037627,0.087547&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;sll=42.577608,-83.145218&amp;sspn=0.144102,0.350189&amp;ie=UTF8&amp;radius=8.92&amp;rq=1&amp;cid=17926306267005349755&amp;ll=42.544038,-83.119726&amp;spn=0.037627,0.087547&amp;iwloc=A" style="text-align:left">View Larger Map</a></small>
+                """})
+
 
 def main():
     application = webapp.WSGIApplication(
@@ -179,6 +195,7 @@ def main():
                 ('/irc/', IRCHandler),
                 ('/locations/', LocationHandler),
                 ('/locations/ann_arbor.html', AnnArborHandler),
+                ('/locations/detroit.html', DetroitHandler),
             ],
             debug=True)
 
