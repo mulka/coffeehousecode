@@ -176,7 +176,7 @@ class DetroitHandler(BaseRequestHandler):
 
     def get(self):
         self.generate('base_page.html', {'content': """
-                <p>We meet every Wednesday, from 7-10 EST, at:</p>
+                <p>We meet every Wednesday, from 8-10 EST, at:</p>
 <pre>Caribou Coffee
 1413 W 14 Mile Rd
 Madison Heights, MI 48071</pre>
