@@ -79,7 +79,7 @@ class AboutHandler(BaseRequestHandler):
 
     def get(self):
         self.generate('base_page.html', {'content': """
-                <h2>Breif History</h2>
+                <h2>Brief History</h2>
                 <p>
                 CoffeeHouseCoders was started in 2008 by mjpizz and steiza to hack on side projects outside of work. It quickly grew to several hackers in the Ann Arbor area and has evolved into a super-informal weekly hacker meetup.
                 </p>
