@@ -161,7 +161,7 @@ class AnnArborHandler(BaseRequestHandler):
         self.generate('base_page.html', {'content': """
                 <h2>When do we meet?</h2>
                 <p>
-                Every Wednesdays, from 9-11PM EST. We alternate between Espresso Royale Cafe on State St. and Mujo's in the Duderstadt Center on North Campus. Want to know where we're meeting this week? Check our niffty FireEagle applet:
+                Every Wednesday, from 9-11PM EST, at Amer's Deli on State St. Want to know where we're meeting this week? Check our niffty FireEagle applet:
                 </p>
 
                 <p>
