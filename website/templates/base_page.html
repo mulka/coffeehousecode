@@ -1,0 +1,114 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="/static/blueprint/screen.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="/static/blueprint/print.css" type="text/css" media="print" />
+        <!--[if IE]>
+          <link rel="stylesheet" href="/static/blueprint/ie.css" type="text/css" media="screen, projection" />
+        <![endif]-->
+
+        <link rel="stylesheet" href="/static/blueprint/plugins/fancy-type/screen.css?v=2" type="text/css" media="screen, projection" />
+
+        <link rel="stylesheet" href="/static/main.css" type="text/css"/>
+
+
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                var linkify = function(text) {
+                    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                    return text.replace(exp, "<a href='$1'>$1</a>");
+                }
+                // linkify twitter users
+                var linkifyReply = function(text){
+                    var exp = /@(\w+)/ig;
+                    return text.replace(exp, "@<a href='http://twitter.com/$1'>$1</a>");
+                }
+
+                var twitter_limit = 20;
+
+                $.getJSON("http://search.twitter.com/search.json?q=coffeehousecoders&callback=?", function(data) {
+                    $(data.results).each(function(i, item){
+                        // console.log(item);
+                        if (i < twitter_limit) {
+                            var buzz_item = $(""+
+                            "<li>"+
+                                "<span class='profile-pic'>"+
+                                    "<a class='profile-link image-link' href='http://twitter.com/"+item.from_user+"'>"+
+                                        "<img src='"+item.profile_image_url+"' height='48px' width='48px' alt='"+item.from_user+"' title='"+item.from_user+"'/>"+
+                                    "</a>"+
+                                "</span>"+
+                                "<span class='content'>"+
+                                    linkifyReply(linkify(item.text))+
+                                "</span>"+
+                            "</li>"+
+                            "")
+                            $("#buzz-feed ul").append(buzz_item);
+                        }
+                    })
+                })
+
+
+
+            })
+
+        </script>
+
+    </head>
+
+    <body>
+        <div class="container">
+        <!-- begin container -->
+
+            <div class="prepend-1 span-14 colborder">
+
+                <div class="span-14 last logo">
+                    <a class="image-link" href="/">
+                        <img src="/static/images/logo.gif" alt="coffeehousecoders logo" width="560" height="93"/>
+                    </a>
+
+                    <div class="nav">
+                        <ul id="nav">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/locations/">Locations</a>
+                            </li>
+                            <li>
+                                <a href="/about/">About</a>
+                            </li>
+                            <li>
+                                <a href="/irc/">IRC</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                {{ content }}
+
+                <br/>
+
+            </div>
+
+            <div class="span-8 last">
+                <div id="buzz-feed">
+                    <h2>Activity Feed</h2>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+
+        <!-- end container -->
+        </div>
+
+        <br/>
+    </body>
+</html>

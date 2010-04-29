@@ -1,0 +1,137 @@
+body {
+    background: #222;
+    color: #555;
+}
+
+div.container {
+    font-size: large;
+    background: #333;
+    color: #bbb;
+}
+
+div.logo {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 2px;
+}
+
+div.colborder {
+    border-color: #444;
+}
+
+div.nav {
+    background: #555555;
+    color: #74c044;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.nav a {
+    color: #fff;
+    border-bottom: 0px;
+}
+
+div.nav a:hover {
+    color: #333;
+}
+
+div.nav li {
+    display: inline;
+    margin-right: 1em;
+    padding-left: 2em;
+}
+
+div.flickr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+strong {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 2px solid #73BF43;
+    color: #73BF43;
+}
+
+a:hover {
+    background-color: #73BF43;
+    color: #333;
+}
+
+.image-link,
+.image-link:hover,
+a img,
+a:hover img {
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: none;
+}
+.fireeagle_badge_main_container{
+
+}
+.fireeagle_badge_map_container{}
+.fireeagle_badge_data_container{
+
+}
+.fireeagle_data_list{}
+.fireeagle_data_entry{
+
+}
+
+.fireeagle_badge_credits{
+    display: none;
+}
+.mibbit {
+    width: 100%;
+    height: 400px;
+}
+
+#buzz-feed {
+    margin-top: 20px;
+}
+
+#buzz-feed ul {
+    list-style: none;
+    margin: 0px;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+#buzz-feed ul li {
+    position: relative;
+    display: block;
+
+    height: 48px;
+}
+
+#buzz-feed ul .profile-pic {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 48px;
+    height: 48px;
+}
+
+#buzz-feed ul .content {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    margin-left: 55px;
+    font-size: 8pt;
+}
