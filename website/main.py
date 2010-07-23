@@ -150,6 +150,9 @@ class LocationHandler(BaseRequestHandler):
                         <li>
                             <a href="/locations/detroit.html">Detroit, MI</a>
                         </li>
+                        <li>
+                            <a href="/locations/downriver.html">Downriver Area, MI</a>
+                        </li>
                     </ul>
                 </div>
                 """})
@@ -185,6 +188,19 @@ Madison Heights, MI 48071</pre>
                 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;sll=42.577608,-83.145218&amp;sspn=0.144102,0.350189&amp;ie=UTF8&amp;radius=8.92&amp;rq=1&amp;cid=17926306267005349755&amp;ll=42.544038,-83.119726&amp;spn=0.037627,0.087547&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;sll=42.577608,-83.145218&amp;sspn=0.144102,0.350189&amp;ie=UTF8&amp;radius=8.92&amp;rq=1&amp;cid=17926306267005349755&amp;ll=42.544038,-83.119726&amp;spn=0.037627,0.087547&amp;iwloc=A" style="text-align:left">View Larger Map</a></small>
                 """})
 
+class DownriverHandler(BaseRequestHandler):
+
+    def get(self):
+        self.generate('base_page.html', {'content': """
+                <p>We meet every Wednesday, from 8-10 EST, at:</p>
+<pre>The Grind
+3037 Biddle Ave.
+Wyandotte, MI 48195</pre>
+
+                <p>The Grind is cash-only. Also, while there, make sure to ask for a perks card (ten punches for a free coffee/drink) - they punch it twice on Wednesdays</p>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;oe=utf-8&amp;ie=UTF8&amp;q=the+grind&amp;fb=1&amp;gl=us&amp;hq=the+grind&amp;hnear=Southfield,+MI&amp;cid=0,0,15488136910354485915&amp;ei=MY1HTJPkKo6UnQfFg6X2Aw&amp;ved=0CDwQnwIwBw&amp;iwloc=A&amp;ll=42.20253,-83.149128&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;oe=utf-8&amp;ie=UTF8&amp;q=the+grind&amp;fb=1&amp;gl=us&amp;hq=the+grind&amp;hnear=Southfield,+MI&amp;cid=0,0,15488136910354485915&amp;ei=MY1HTJPkKo6UnQfFg6X2Aw&amp;ved=0CDwQnwIwBw&amp;iwloc=A&amp;ll=42.20253,-83.149128&amp;spn=0.006295,0.006295&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                """})
+
 
 def main():
     application = webapp.WSGIApplication(
@@ -196,6 +212,7 @@ def main():
                 ('/locations/', LocationHandler),
                 ('/locations/ann_arbor.html', AnnArborHandler),
                 ('/locations/detroit.html', DetroitHandler),
+                ('/locations/downriver.html', DownriverHandler),
             ],
             debug=True)
 
