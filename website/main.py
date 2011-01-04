@@ -163,13 +163,12 @@ class AnnArborHandler(BaseRequestHandler):
     def get(self):
         self.generate('base_page.html', {'content': """
                 <h2>When do we meet?</h2>
-                <p>
-                Every Wednesday, from 9-11PM EST, at Amer's Deli on State St. Want to know where we're meeting this week? Check our niffty FireEagle applet:
-                </p>
+                <p>Currently, we're meeting the first Monday of each month, from 8pm EST till whenever, at:</p>
+                <pre>Workantile Exchange
+118 S Main
+Ann Arbor, MI 48104</pre>
 
-                <p>
-                <div class="fireeagle_badge_main_container"><script type="text/javascript"src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=OpoSSWfV34F0BBl2kWn.ogVfnZrgxAVkQJiKaH_JdSatrueka6_Ut6Qnl0cZ"></script><div class="fireeagle_badge_map_container" id="fireeagle_map"></div><div id="fireeagle_badge" class="fireeagle_badge_data_container"><br /></div><script type="text/javascript" src="http://www.txtst.com/fireeagle_badge/fireeagle_badge.php?k=1h4mqnx69yfw208g&timezone=Eastern+Standard+Time&zoom=4"></script></div>
-                </p>
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=118+s+main+st,+ann+arbor,+mi&amp;sll=42.28119,-83.747352&amp;sspn=0.004953,0.011362&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;hnear=118+S+Main+St,+Ann+Arbor,+Washtenaw,+Michigan+48104&amp;z=14&amp;ll=42.280873,-83.748558&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=118+s+main+st,+ann+arbor,+mi&amp;sll=42.28119,-83.747352&amp;sspn=0.004953,0.011362&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;hnear=118+S+Main+St,+Ann+Arbor,+Washtenaw,+Michigan+48104&amp;z=14&amp;ll=42.280873,-83.748558" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 
                 <h2>Projects</h2>
                 <p>Want your project linked here? Come bug us!</p>
