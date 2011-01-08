@@ -153,6 +153,9 @@ class LocationHandler(BaseRequestHandler):
                         <li>
                             <a href="/locations/downriver.html">Downriver Area, MI</a>
                         </li>
+                        <li>
+                            <a href="/locations/lansing.html">Lansing, MI</a>
+                        </li>
                     </ul>
                 </div>
                 """})
@@ -202,6 +205,19 @@ Wyandotte, MI 48195</pre>
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;oe=utf-8&amp;ie=UTF8&amp;q=the+grind&amp;fb=1&amp;gl=us&amp;hq=the+grind&amp;hnear=Southfield,+MI&amp;cid=0,0,15488136910354485915&amp;ei=MY1HTJPkKo6UnQfFg6X2Aw&amp;ved=0CDwQnwIwBw&amp;iwloc=A&amp;ll=42.20253,-83.149128&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;oe=utf-8&amp;ie=UTF8&amp;q=the+grind&amp;fb=1&amp;gl=us&amp;hq=the+grind&amp;hnear=Southfield,+MI&amp;cid=0,0,15488136910354485915&amp;ei=MY1HTJPkKo6UnQfFg6X2Aw&amp;ved=0CDwQnwIwBw&amp;iwloc=A&amp;ll=42.20253,-83.149128&amp;spn=0.006295,0.006295&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
                 """})
 
+class LansingHandler(BaseRequestHandler):
+
+    def get(self):
+        self.generate('base_page.html', {'content': """
+                <h2>When do we meet?</h2>
+                <p>The first meeting is Wednesday, January 18th (2011), 7 PM, at:</p>
+                <pre>Second Gear
+1134 N. Washington Ave.
+Lansing, MI</pre>
+
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Second+Gear+1134+N.+Washington+Ave.+Lansing+MI&amp;sll=42.270872,-83.726329&amp;sspn=0.1443,0.234489&amp;ie=UTF8&amp;hq=Second+Gear&amp;hnear=1134+N+Washington+Ave,+Lansing,+Ingham,+Michigan+48906&amp;ll=42.747153,-84.551982&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Second+Gear+1134+N.+Washington+Ave.+Lansing+MI&amp;sll=42.270872,-83.726329&amp;sspn=0.1443,0.234489&amp;ie=UTF8&amp;hq=Second+Gear&amp;hnear=1134+N+Washington+Ave,+Lansing,+Ingham,+Michigan+48906&amp;ll=42.747153,-84.551982&amp;spn=0.006295,0.006295" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                """})
+
 
 def main():
     application = webapp.WSGIApplication(
@@ -214,6 +230,7 @@ def main():
                 ('/locations/ann_arbor.html', AnnArborHandler),
                 ('/locations/detroit.html', DetroitHandler),
                 ('/locations/downriver.html', DownriverHandler),
+                ('/locations/lansing.html', LansingHandler),
             ],
             debug=True)
 
