@@ -210,7 +210,7 @@ class LansingHandler(BaseRequestHandler):
     def get(self):
         self.generate('base_page.html', {'content': """
                 <h2>When do we meet?</h2>
-                <p>The first meeting is Wednesday, January 18th (2011), 7 PM, at:</p>
+                <p>The first meeting is Wednesday, January 19th (2011), 7 PM, at:</p>
                 <pre>Second Gear
 1134 N. Washington Ave.
 Lansing, MI</pre>
