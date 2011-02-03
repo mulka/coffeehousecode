@@ -210,12 +210,8 @@ class LansingHandler(BaseRequestHandler):
     def get(self):
         self.generate('base_page.html', {'content': """
                 <h2>When do we meet?</h2>
-                <p>The first meeting is Wednesday, January 19th (2011), 7 PM, at:</p>
-                <pre>Second Gear
-1134 N. Washington Ave.
-Lansing, MI</pre>
-
-                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Second+Gear+1134+N.+Washington+Ave.+Lansing+MI&amp;sll=42.270872,-83.726329&amp;sspn=0.1443,0.234489&amp;ie=UTF8&amp;hq=Second+Gear&amp;hnear=1134+N+Washington+Ave,+Lansing,+Ingham,+Michigan+48906&amp;ll=42.747153,-84.551982&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Second+Gear+1134+N.+Washington+Ave.+Lansing+MI&amp;sll=42.270872,-83.726329&amp;sspn=0.1443,0.234489&amp;ie=UTF8&amp;hq=Second+Gear&amp;hnear=1134+N+Washington+Ave,+Lansing,+Ingham,+Michigan+48906&amp;ll=42.747153,-84.551982&amp;spn=0.006295,0.006295" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                <p>Check out the Google Calendar below for our meeting schedule.</p>
+                <iframe src="https://www.google.com/calendar/b/0/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=350&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=2q55khsgs5bsrkae0m1jmut6tg%40group.calendar.google.com&amp;color=%237A367A&amp;ctz=America%2FNew_York" style=" border-width:0 " width="425" height="350" frameborder="0" scrolling="no"></iframe>
                 """})
 
 
