@@ -166,14 +166,8 @@ class AnnArborHandler(BaseRequestHandler):
     def get(self):
         self.generate('base_page.html', {'content': """
                 <h2>When do we meet?</h2>
-                <p>Currently, we're meeting on the first Monday of each month, from 8pm EST till whenever, at:</p>
-                <pre>Workantile Exchange
-118 S Main
-Ann Arbor, MI 48104</pre>
-
-                <p>(Strictly speaking, it's not a coffee shop, but coffee should be available nonetheless...)</p>
-
-                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=118+s+main+st,+ann+arbor,+mi&amp;sll=42.28119,-83.747352&amp;sspn=0.004953,0.011362&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;hnear=118+S+Main+St,+Ann+Arbor,+Washtenaw,+Michigan+48104&amp;z=14&amp;ll=42.280873,-83.748558&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=118+s+main+st,+ann+arbor,+mi&amp;sll=42.28119,-83.747352&amp;sspn=0.004953,0.011362&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;hnear=118+S+Main+St,+Ann+Arbor,+Washtenaw,+Michigan+48104&amp;z=14&amp;ll=42.280873,-83.748558" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                <p>We're currently experimenting with where and when CoffeeHouseCoders Ann Arbor meets. Generally it will be on some Mondays, from 8pm EST till whenever.</p>
+                <p>For meeting location announcements, join the <a href='http://groups.google.com/group/coffeehousecoders'>Google group</a> or follow us on <a href='http://twitter.com/coffeehousecode'>Twitter</a>.</p>
 
                 <h2>Projects</h2>
                 <p>Want your project linked here? Come bug us!</p>
