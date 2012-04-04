@@ -179,11 +179,11 @@ class DetroitHandler(BaseRequestHandler):
         self.generate('base_page.html', {'content': """
                 <p>We meet every Wednesday, from 8-10 EST, at:</p>
 <pre>Caribou Coffee
-1413 W 14 Mile Rd
-Madison Heights, MI 48071</pre>
+31901 Woodward Avenue
+Royal Oak, MI 48073</pre>
 
                 <p>The last Wed of the month is a special longer edition that starts at 7pm.</p>
-                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;sll=42.577608,-83.145218&amp;sspn=0.144102,0.350189&amp;ie=UTF8&amp;radius=8.92&amp;rq=1&amp;cid=17926306267005349755&amp;ll=42.544038,-83.119726&amp;spn=0.037627,0.087547&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;sll=42.577608,-83.145218&amp;sspn=0.144102,0.350189&amp;ie=UTF8&amp;radius=8.92&amp;rq=1&amp;cid=17926306267005349755&amp;ll=42.544038,-83.119726&amp;spn=0.037627,0.087547&amp;iwloc=A" style="text-align:left">View Larger Map</a></small>
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;aq=&amp;sll=42.524139,-83.195461&amp;sspn=0.005448,0.01134&amp;ie=UTF8&amp;hq=caribou+coffee&amp;hnear=&amp;ll=42.52431,-83.192762&amp;spn=0.005448,0.01134&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=8777002513835499183&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;aq=&amp;sll=42.524139,-83.195461&amp;sspn=0.005448,0.01134&amp;ie=UTF8&amp;hq=caribou+coffee&amp;hnear=&amp;ll=42.52431,-83.192762&amp;spn=0.005448,0.01134&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=8777002513835499183" style="color:#FFF;text-align:left">View Larger Map</a></small>
                 """})
 
 class DownriverHandler(BaseRequestHandler):
