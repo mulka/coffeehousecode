@@ -131,8 +131,7 @@ class IRCHandler(BaseRequestHandler):
                     or you can choose a username below and start chatting!
                 </p>
 
-                <iframe class="mibbit" width="100%" height="100%" src="http://widget.mibbit.com/?settings=e84f0fb60dd0c41b61a31c0b6dd8b0bf&server=irc.freenode.net&channel=%23coffeehousecoders&noServerNotices=true&noServerMotd=true&autoConnect=true">
-                </iframe>
+                <iframe class="chatbox" src="http://webchat.freenode.net/?channels=#coffeehousecoders"></iframe>
                 """})
 
 
