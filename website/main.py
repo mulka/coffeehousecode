@@ -67,29 +67,14 @@ class IRCHandler(BaseRequestHandler):
 
 class LocationsHandler(BaseRequestHandler):
 
-    def get(self):
-        self.generate('locations.html')
-
-
-class AnnArborHandler(BaseRequestHandler):
-
-    def get(self):
-        self.generate('locations/annarbor.html')
-
-class DetroitHandler(BaseRequestHandler):
-
-    def get(self):
-        self.generate('locations/detroit.html')
-
-class DownriverHandler(BaseRequestHandler):
-
-    def get(self):
-        self.generate('locations/downriver.html')
-
-class LansingHandler(BaseRequestHandler):
-
-    def get(self):
-        self.generate('locations/lansing.html')
+    def get(self, file):
+        if file:
+            try:
+                self.generate('locations/' + file)
+            except:
+                self.error(404)
+        else:
+            self.generate('locations.html')
 
 
 def main():
@@ -99,11 +84,7 @@ def main():
                 ('/about/', AboutHandler),
                 ('/advice/', AdviceHandler),
                 ('/irc/', IRCHandler),
-                ('/locations/', LocationsHandler),
-                ('/locations/ann_arbor.html', AnnArborHandler),
-                ('/locations/detroit.html', DetroitHandler),
-                ('/locations/downriver.html', DownriverHandler),
-                ('/locations/lansing.html', LansingHandler),
+                (r'/locations/([a-z_]*\.html)?', LocationsHandler),
             ],
             debug=True)
 
