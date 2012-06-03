@@ -8,37 +8,8 @@ handlers:
   script: tweet.py
   login: admin
 
-- url: /static/main.css
-  static_files: static/main.css
-  upload: static/main.css
-
-- url: /static/blueprint/screen.css
-  static_files: static/blueprint/screen.css
-  upload: static/blueprint/screen.css
-
-- url: /static/blueprint/print.css
-  static_files: static/blueprint/print.css
-  upload: static/blueprint/print.css
-
-- url: /static/blueprint/plugins/fancy-type/screen.css
-  static_files: static/blueprint/plugins/fancy-type/screen.css
-  upload: static/blueprint/plugins/fancy-type/screen.css
-
-- url: /static/blueprint/plugins/fancy-type/sprite.css
-  static_files: static/blueprint/plugins/fancy-type/sprite.css
-  upload: static/blueprint/plugins/fancy-type/sprite.css
-
-- url: /static/jquery.lightbox/css/jquery.lightbox-0.4.css
-  static_files: static/jquery.lightbox/css/jquery.lightbox-0.4.css
-  upload: static/jquery.lightbox/css/jquery.lightbox-0.4.css
-
-- url: /static/jquery.lightbox/js/jquery.lightbox-0.5.min.js
-  static_files: static/jquery.lightbox/js/jquery.lightbox-0.5.min.js
-  upload: static/jquery.lightbox/js/jquery.lightbox-0.5.min.js
-
-- url: /static/images/logo.gif
-  static_files: static/images/logo.gif
-  upload: static/images/logo.gif
+- url: /static
+  static_dir: static
 
 - url: .*
   script: main.py
