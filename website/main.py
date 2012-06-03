@@ -44,168 +44,52 @@ class BaseRequestHandler(webapp.RequestHandler):
 class MainHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <h2>Who are we?</h2>
-                <p>
-                If you're new to coding or a seasoned hacker, CoffeeHouseCoders is for you. We meet once a week in local coffee shops to work on pet projects, talk about technology, and meet our fellow hackers.
-                </p>
-
-                <p>Sound like your kind of thing?</p>
-
-                <div class="flickr">
-                    <object class="flickr" width="300" height="200">
-
-                        <param name="flashvars" value="&offsite=true&amp;lang=en-us&page_show_url=%2Fsearch%2Fshow%2F%3Fq%3Dcoffeehousecoders&page_show_back_url=%2Fsearch%2F%3Fq%3Dcoffeehousecoders&method=flickr.photos.search&api_params_str=&api_text=coffeehousecoders&api_tag_mode=bool&api_sort=relevance&jump_to=&start_index=0">
-                        </param>
-                        <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=67348">
-                        </param>
-                        <param name="allowFullScreen" value="true">
-                        </param>
-                        <embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=67348" allowFullScreen="true" flashvars="&offsite=true&amp;lang=en-us&page_show_url=%2Fsearch%2Fshow%2F%3Fq%3Dcoffeehousecoders&page_show_back_url=%2Fsearch%2F%3Fq%3Dcoffeehousecoders&method=flickr.photos.search&api_params_str=&api_text=coffeehousecoders&api_tag_mode=bool&api_sort=relevance&jump_to=&start_index=0" width="400" height="300">
-                        </embed>
-                    </object>
-                </div>
-
-                <h2>Join up!</h2>
-
-                <p>
-                    Find a <a href="/locations/">meetup location near you</a>.
-                    You can also <a href="/irc/">chat with us on IRC</a>.
-                </p>
-                """})
+        self.generate('index.html')
 
 
 class AboutHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <h2>Brief History</h2>
-                <p>
-                CoffeeHouseCoders was started in 2008 by mjpizz and steiza to hack on side projects outside of work. It quickly grew to several hackers in the Ann Arbor area and has evolved into a super-informal weekly hacker meetup.
-                </p>
-                <p>
-                There's no "meeting format", people just show up and do what they want: coding, whiteboarding and idea with friends, arguing about technology, or finding startup co-founders.
-                </p>
-                <p>
-                We love CoffeeHouseCoders so much, we put together this site to make it even easier to organize a meetup. Find a <a href="/locations/">location near you</a> or <a href="/advice/">start your own</a>.
-                </p>
-                """})
+        self.generate('about.html')
 
 
 class AdviceHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <h2>Starting a group</h2>
-                <p>
-                Rock on! It's pretty easy to organize a meetup, just pick a time, place, and show up. <a href="mailto:startup@coffeehousecoders.org">Send us an e-mail</a> and we can add you to the <a href="/locations/">list of locations</a>. Below is some advice we wished someone told us when we were getting started:
-                </p>
-
-                <h2>Picking a meeting time</h2>
-                <p>
-                You probably want to once a week or once a month. Meeting weekly is easier to explain ('we meet every Wednesday' instead of 'second Wednesday of every month') and it's easier for people to work into their schedules, even if they can't make it to every meeting. If you decide to meet once a month, consider doing something like <a href='http://superhappydevhouse.org/'>SuperHappyDevHouse</a>. We meet Wednesdays, 9-11PM EST (plus or minus a few hours), and that's definitely when the <a href="/irc/">IRC channel</a> is most active. Pick a time you know at least you and one other person can make it.
-                </p>
-
-                <h2>Pick a location</h2>
-                <p>
-                Wherever you meet, it must have good Internet! Hell hath no fury like offline geeks. For meeting weekly, make sure there's also good coffee/snacks; when meeting monthly some place you can bring in pizza and beer is nice. Coffee shops, bars, university buildings, or local hacker spaces are all good places to meet. You might want to check out a few venues initially, but pick one fairly quickly, so people don't get confused.
-                </p>
-
-                <h2>Meet!</h2>
-                <p>
-                This is the fun part! Tell a bunch of people about the event, bring something distinctive (like <a href="http://www.flickr.com/photos/14799217@N08/3255426613/">a whiteboard</a> or <a href="http://lyfe.net/i/2803">laptop stickers</a>). Show up a little early and hack away!
-                </p>
-                """})
+        self.generate('advice.html')
 
 
 class IRCHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <h2>Join us on IRC</h2>
-                <p>
-                    You can chat with us using any IRC client at
-                    <span class="bright">
-                        irc.freenode.net : #coffeehousecoders
-                    </span>
-                    or you can choose a username below and start chatting!
-                </p>
-
-                <iframe class="chatbox" src="http://webchat.freenode.net/?channels=#coffeehousecoders"></iframe>
-                """})
+        self.generate('irc.html')
 
 
-class LocationHandler(BaseRequestHandler):
+class LocationsHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <h2>Locations</h2>
-                <p>Don't see your location below? <a href="/advice/">start your own</a>!</p>
-                <div class="locations">
-                    <ul>
-                        <li>
-                            <a href="/locations/ann_arbor.html">Ann Arbor, MI</a>
-                        </li>
-                        <li>
-                            <a href="/locations/detroit.html">Detroit, MI</a>
-                        </li>
-                        <li>
-                            <a href="/locations/downriver.html">Downriver Area, MI</a>
-                        </li>
-                        <li>
-                            <a href="/locations/lansing.html">Lansing, MI</a>
-                        </li>
-                    </ul>
-                </div>
-                """})
+        self.generate('locations.html')
 
 
 class AnnArborHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <h2>When do we meet?</h2>
-                <p>We meet approximately every two weeks at Espresso Royale on State St. or Space 2435 in North Quad. </p>
-                <p>For meeting location announcements, join the <a href='http://www.meetup.com/CoffeeHouseCoders/'>Meetup group</a>, subscribe to our event calendar (<a href="webcal://www.meetup.com/CoffeeHouseCoders/events/ical/Coffee+House+Coders/">iCal</a>/<a href="http://www.meetup.com/CoffeeHouseCoders/events/rss/Coffee+House+Coders/">RSS</a>) or follow us on <a href='http://twitter.com/coffeehousecode'>Twitter</a>.</p>
-
-                <h2>Projects</h2>
-                <p>Want your project linked here? Come bug us!</p>
-                """})
+        self.generate('locations/annarbor.html')
 
 class DetroitHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <p>We meet every Wednesday, from 8-10 EST, at:</p>
-<pre>Caribou Coffee
-31901 Woodward Avenue
-Royal Oak, MI 48073</pre>
-
-                <p>The last Wed of the month is a special longer edition that starts at 7pm.</p>
-                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;aq=&amp;sll=42.524139,-83.195461&amp;sspn=0.005448,0.01134&amp;ie=UTF8&amp;hq=caribou+coffee&amp;hnear=&amp;ll=42.52431,-83.192762&amp;spn=0.005448,0.01134&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=8777002513835499183&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=caribou+coffee&amp;aq=&amp;sll=42.524139,-83.195461&amp;sspn=0.005448,0.01134&amp;ie=UTF8&amp;hq=caribou+coffee&amp;hnear=&amp;ll=42.52431,-83.192762&amp;spn=0.005448,0.01134&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=8777002513835499183" style="color:#FFF;text-align:left">View Larger Map</a></small>
-                """})
+        self.generate('locations/detroit.html')
 
 class DownriverHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <p>We meet every Wednesday, from 8-10 EST, at:</p>
-<pre>The Grind
-3037 Biddle Ave.
-Wyandotte, MI 48195</pre>
-
-                <p>The Grind is cash-only. Also, while there, make sure to ask for a perks card (ten punches for a free coffee/drink) - they punch it twice on Wednesdays</p>
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;oe=utf-8&amp;ie=UTF8&amp;q=the+grind&amp;fb=1&amp;gl=us&amp;hq=the+grind&amp;hnear=Southfield,+MI&amp;cid=0,0,15488136910354485915&amp;ei=MY1HTJPkKo6UnQfFg6X2Aw&amp;ved=0CDwQnwIwBw&amp;iwloc=A&amp;ll=42.20253,-83.149128&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;oe=utf-8&amp;ie=UTF8&amp;q=the+grind&amp;fb=1&amp;gl=us&amp;hq=the+grind&amp;hnear=Southfield,+MI&amp;cid=0,0,15488136910354485915&amp;ei=MY1HTJPkKo6UnQfFg6X2Aw&amp;ved=0CDwQnwIwBw&amp;iwloc=A&amp;ll=42.20253,-83.149128&amp;spn=0.006295,0.006295&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-                """})
+        self.generate('locations/downriver.html')
 
 class LansingHandler(BaseRequestHandler):
 
     def get(self):
-        self.generate('base_page.html', {'content': """
-                <h2>When do we meet?</h2>
-                <p>Check out the Google Calendar below for our meeting schedule.</p>
-                <iframe src="https://www.google.com/calendar/b/0/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=350&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=2q55khsgs5bsrkae0m1jmut6tg%40group.calendar.google.com&amp;color=%237A367A&amp;ctz=America%2FNew_York" style=" border-width:0 " width="425" height="350" frameborder="0" scrolling="no"></iframe>
-                """})
+        self.generate('locations/lansing.html')
 
 
 def main():
@@ -215,7 +99,7 @@ def main():
                 ('/about/', AboutHandler),
                 ('/advice/', AdviceHandler),
                 ('/irc/', IRCHandler),
-                ('/locations/', LocationHandler),
+                ('/locations/', LocationsHandler),
                 ('/locations/ann_arbor.html', AnnArborHandler),
                 ('/locations/detroit.html', DetroitHandler),
                 ('/locations/downriver.html', DownriverHandler),
